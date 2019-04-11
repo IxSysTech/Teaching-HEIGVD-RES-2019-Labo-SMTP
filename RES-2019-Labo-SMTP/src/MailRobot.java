@@ -1,32 +1,36 @@
-import model.mail.*;
+/**
+ * Auteur   : Nemanja Pantic, David Simeonovic
+ * Nom      : MailRobot.java
+ * But      : Cette classe réunie toutes les autres classes et permet d'envoyé les mails aux personnes
+ */
+import model.*;
 import smtp.*;
 import config.*;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 public class MailRobot {
+    /**
+     * Programme principal qui permet d'envoyer les mails
+     * @param args Argument passer à la fonction (pas utilisé)
+     */
     public static void main(String[] args) {
-        SMTPClient client = new SMTPClient("127.0.0.1",2525);
         ConfigurationManager cm = new ConfigurationManager();
-        Groups groups = new Groups(cm.getVictims());
+        SMTPClient client = new SMTPClient(cm);
+        GroupGenerator gm = new GroupGenerator(cm.getVictims());
 
-        groups.createGroups(4);
-        List<Group> prankGroup = groups.getGroups();
+        gm.createGroups(4);
+        List<Group> prankGroup = gm.getGroups();
         List<Message> allMessages = new ArrayList<Message>();
 
-        for (String key : cm.getMessages().keySet()) {
-            Message m = new Message(prankGroup.get(1), key, cm.getMessages().get(key));
+        client.connect();
+        int i = 0;
+            for (String key : cm.getMessages().keySet()) {
+            Message m = new Message(prankGroup.get(i++), key, cm.getMessages().get(key));
+            client.send(m, true);
             allMessages.add(m);
         }
-
-        if(prankGroup != null) {
-            for (Group g : prankGroup) {
-                g.displayMembers();
-            }
-        }
-
+        client.disconnect();
     }
 }
