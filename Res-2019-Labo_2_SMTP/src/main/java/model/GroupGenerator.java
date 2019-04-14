@@ -25,26 +25,36 @@ public class GroupGenerator {
      * Génére des groupes d'utilisateurs
      * @param nbGroups Int : nombre de groupes a créer
      */
-    public void createGroups(int nbGroups){
+    public boolean createGroups(int nbGroups){
         List<String> tmpUsers = users;
-        int rest = users.size()%nbGroups;
-        int nbMembers = (int)users.size()/nbGroups;
-        if(nbMembers < nbMinGroupUsers){
-            System.out.println("Not enough users to create " + nbGroups);
-        } else{
-            groups = new ArrayList<Group>(nbGroups);
+        if(nbGroups != 0) {
+            int rest = users.size()%nbGroups;
+            int nbMembers = (int)users.size()/nbGroups;
 
-            for(int i = 0; i < nbGroups; ++i){
-                Group group = new Group();
-                int tmpNbMembers = nbMembers;
-                if(i == nbGroups - 1){tmpNbMembers += rest;}
-                for(int j = 0; j < tmpNbMembers; ++j) {
-                    group.addMemebers(tmpUsers.get(tmpUsers.size() - 1));
-                    tmpUsers.remove(tmpUsers.size() - 1);
+            if (nbMembers < nbMinGroupUsers) {
+                System.out.println("Not enough users to create " + nbGroups);
+                return false;
+            } else {
+                groups = new ArrayList<Group>(nbGroups);
+
+                for (int i = 0; i < nbGroups; ++i) {
+                    Group group = new Group();
+                    int tmpNbMembers = nbMembers;
+                    if (i == nbGroups - 1) {
+                        tmpNbMembers += rest;
+                    }
+                    for (int j = 0; j < tmpNbMembers; ++j) {
+                        group.addMembers(tmpUsers.get(tmpUsers.size() - 1));
+                        tmpUsers.remove(tmpUsers.size() - 1);
+                    }
+                    groups.add(group);
                 }
-                groups.add(group);
             }
+        } else {
+            System.out.println("Not enough users to create " + nbGroups);
+            return false;
         }
+        return true;
     }
 
     /**

@@ -22,9 +22,9 @@ public class ConfigurationManager {
      * Constructeur de la classe, appelle les fonctions qui lisent les fichier de config
      */
     public ConfigurationManager(){
-        config = this.readFile("src/main/java/config/config.properties");
-        messages = this.readMessage("src/main/java/config/messages.txt");
-        victims = this.readFile("src/main/java/config/victims.txt");
+        config = this.readFile("config.properties");
+        messages = this.readMessage("messages.txt");
+        victims = this.readFile("victims.txt");
     }
 
     /**

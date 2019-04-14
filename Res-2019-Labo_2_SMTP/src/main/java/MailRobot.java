@@ -9,6 +9,7 @@ import config.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class MailRobot {
     /**
@@ -19,18 +20,39 @@ public class MailRobot {
         ConfigurationManager cm = new ConfigurationManager();
         SMTPClient client = new SMTPClient(cm);
         GroupGenerator gm = new GroupGenerator(cm.getVictims());
+        Scanner in = new Scanner(System.in);
 
-        gm.createGroups(4);
+        System.out.println("Nomber of groups to generate : ");
+        String nbGroups = in.nextLine();
+
+        while(!gm.createGroups(Integer.valueOf(nbGroups))){
+            System.out.println("Nomber of groups to generate : ");
+            nbGroups = in.nextLine();
+        }
+
+        System.out.println("Use connection for the SMTP server [y/n]");
+        String userLogin = in.nextLine();
+
+        while(!(userLogin.equals("y") || userLogin.equals("n"))){
+            System.out.println("Bad response");
+            System.out.println("Use connection for the SMTP server [y/n]");
+            userLogin = in.nextLine();
+        }
+
         List<Group> prankGroup = gm.getGroups();
         List<Message> allMessages = new ArrayList<Message>();
 
         client.connect();
         int i = 0;
-            for (String key : cm.getMessages().keySet()) {
-            Message m = new Message(prankGroup.get(i++), key, cm.getMessages().get(key));
-            client.send(m, false);
-            allMessages.add(m);
+        for (String key : cm.getMessages().keySet()) {
+            Message m = null;
+            if(i < prankGroup.size()) {
+                m = new Message(prankGroup.get(i++), key, cm.getMessages().get(key));
+                client.send(m, userLogin.equals("y") ? true : false);
+                allMessages.add(m);
+            }
         }
+
         client.disconnect();
     }
 }

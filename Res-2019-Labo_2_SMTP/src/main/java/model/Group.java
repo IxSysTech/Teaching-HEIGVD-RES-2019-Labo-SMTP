@@ -23,7 +23,7 @@ public class Group {
      * Permet d'ajouter une membre au groupe
      * @param user String : mail du membre
      */
-    public void addMemebers(String user){
+    public void addMembers(String user){
         members.add(user);
     }
 
