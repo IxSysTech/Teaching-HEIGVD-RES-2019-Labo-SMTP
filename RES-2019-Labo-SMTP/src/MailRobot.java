@@ -28,7 +28,7 @@ public class MailRobot {
         int i = 0;
             for (String key : cm.getMessages().keySet()) {
             Message m = new Message(prankGroup.get(i++), key, cm.getMessages().get(key));
-            client.send(m, true);
+            client.send(m, false);
             allMessages.add(m);
         }
         client.disconnect();

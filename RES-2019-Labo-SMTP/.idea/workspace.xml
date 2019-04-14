@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19543c00-bbd7-485c-9f1e-5279f413cc9d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RES-2019-Labo-SMTP/MailRobot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RES-2019-Labo-SMTP/MailRobot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RES-2019-Labo-SMTP/config/ConfigurationManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RES-2019-Labo-SMTP/config/ConfigurationManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RES-2019-Labo-SMTP/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RES-2019-Labo-SMTP/config/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RES-2019-Labo-SMTP/config/messages.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RES-2019-Labo-SMTP/config/messages.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RES-2019-Labo-SMTP/model/mail/Group.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RES-2019-Labo-SMTP/model/mail/Groups.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RES-2019-Labo-SMTP/model/mail/Message.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RES-2019-Labo-SMTP/model/prank/Prank.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RES-2019-Labo-SMTP/model/prank/PrankGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RES-2019-Labo-SMTP/smtp/SMTPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RES-2019-Labo-SMTP/smtp/SMTPClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MailRobot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MailRobot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/ConfigurationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/ConfigurationManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/messages.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/messages.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/mail/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/mail/Groups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/GroupGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/mail/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/prank/Prank.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/prank/PrankGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/smtp/SMTPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/smtp/SMTPClient.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,7 +16,30 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/config/config.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="16" selection-start-column="16" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MailRobot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -65,15 +69,15 @@
         <option value="$PROJECT_DIR$/src/model/mail/Groups.java" />
         <option value="$PROJECT_DIR$/src/model/mail/Group.java" />
         <option value="$PROJECT_DIR$/src/model/mail/Message.java" />
-        <option value="$PROJECT_DIR$/src/config/config.properties" />
         <option value="$PROJECT_DIR$/src/model/Groups.java" />
         <option value="$PROJECT_DIR$/src/config/ConfigurationManager.java" />
         <option value="$PROJECT_DIR$/src/smtp/SMTPClient.java" />
         <option value="$PROJECT_DIR$/src/model/Message.java" />
         <option value="$PROJECT_DIR$/src/model/GroupGenerator.java" />
         <option value="$PROJECT_DIR$/src/model/Group.java" />
-        <option value="$PROJECT_DIR$/src/MailRobot.java" />
         <option value="$PROJECT_DIR$/src/config/messages.txt" />
+        <option value="$PROJECT_DIR$/src/config/config.properties" />
+        <option value="$PROJECT_DIR$/src/MailRobot.java" />
       </list>
     </option>
   </component>
@@ -97,8 +101,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -133,6 +135,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -188,11 +192,12 @@
       <workItem from="1554799219178" duration="3173000" />
       <workItem from="1554964304210" duration="2754000" />
       <workItem from="1554967130565" duration="5889000" />
+      <workItem from="1555234640088" duration="201000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35083000" />
+    <option name="totallyTimeSpent" value="35284000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -206,7 +211,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="42" width="1920" height="1038" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12313433" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.124200426" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -280,13 +285,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -371,13 +369,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MailRobot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        <state relative-caret-position="450">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="method#main#0;class#MailRobot#0" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
