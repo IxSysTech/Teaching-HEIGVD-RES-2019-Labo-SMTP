@@ -1,0 +1,6 @@
+MailRobot.class
+config/ConfigurationManager.class
+model/Group.class
+model/GroupGenerator.class
+model/Message.class
+smtp/SMTPClient.class
